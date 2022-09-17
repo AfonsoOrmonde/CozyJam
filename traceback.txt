@@ -2,35 +2,31 @@
 
 While running game code:
   File "game/script.rpy", line 17, in script call
-    call begin_minigame
-  File "game/concoctioncafe.rpy", line 36, in script call
-    call compara_resposta
-  File "game/concoctioncafe.rpy", line 40, in script
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-  File "game/concoctioncafe.rpy", line 40, in <module>
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-NameError: name 'chantili' is not defined
+    call TiaDeCascais from _call_TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 3, in script
+    if tia_points == 1:
+  File "game/TiaDeCascais.rpy", line 3, in <module>
+    if tia_points == 1:
+NameError: name 'tia_points' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 17, in script call
-    call begin_minigame
-  File "game/concoctioncafe.rpy", line 36, in script call
-    call compara_resposta
-  File "game/concoctioncafe.rpy", line 40, in script
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
+    call TiaDeCascais from _call_TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 3, in script
+    if tia_points == 1:
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 2115, in execute
     if renpy.python.py_eval(condition):
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1092, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1085, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/concoctioncafe.rpy", line 40, in <module>
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-NameError: name 'chantili' is not defined
+  File "game/TiaDeCascais.rpy", line 3, in <module>
+    if tia_points == 1:
+NameError: name 'tia_points' is not defined
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
-Thu Sep 15 01:13:05 2022
+Sat Sep 17 18:45:29 2022

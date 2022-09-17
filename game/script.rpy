@@ -1,11 +1,6 @@
-﻿# The script of the game goes in this file.
+﻿define e = Character("Eileen")
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
 
-define e = Character("Eileen")
-
-# The game starts here.
 
 label start:
     $acucar = 1
@@ -14,6 +9,45 @@ label start:
     $leite = 0
     $cereja = 0
     $blend_r = 0
-    call begin_minigame
+    #call begin_minigame
+
+
+    #------------------------------- ARC POINTS --------------------------------
+    $ tia_points = 1
+    $ kid_points = 1
+    $ girl_points = 1
+
+    # ----------------------------- CHARACTERS ---------------------------------
+    define Mc = Character("Barista", who_color="#cc9741")
+    define Tc = Character("Socialite", who_color="#cc9741")
+    define Kid = Character("Kid", who_color="#cc9741")
+    define Phy = Character("Girl", who_color="#cc9741")
+    define Lc = Character("Little Cookie", who_color="#cc9741")
+
+    #--------------------------- BACKGROUND IMAGES -----------------------------
+    image general_background = "general_background.png"
+
+    #---------------------------- CHARACTER IMAGES -----------------------------
+    image tia_happy = "tia_happy.png"
+    image tia_sad = "tia_sad.png"
+    image kid_happy = "kid_happy.png"
+    image kid_sad = "kid_sad.png"
+    image girl_happy = "girl_happy.png"
+    image girl_sad = "girl_sad.png"
+
+    #--------------------------- INGREDIENTS IMAGES ----------------------------
+    # TO DO
+
+    #----------------------------- DAY MANAGMENT -------------------------------
+    # DAY 1
+    call TiaDeCascais from _call_TiaDeCascais
+
+    # DAY 2
+
+    # DAY 3
+
+    # DAY 4
+
+
 
     return
