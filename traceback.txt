@@ -2,17 +2,27 @@
 
 While running game code:
   File "game/script.rpy", line 17, in script call
+<<<<<<< HEAD
     call TiaDeCascais from _call_TiaDeCascais
   File "game/TiaDeCascais.rpy", line 3, in script
     if tia_points == 1:
   File "game/TiaDeCascais.rpy", line 3, in <module>
     if tia_points == 1:
 NameError: name 'tia_points' is not defined
+=======
+    call begin_minigame
+  File "game/concoctioncafe.rpy", line 14, in script
+    call screen cafe_escolha
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+TypeError: get_tooltip() missing 1 required positional argument: 'self'
+>>>>>>> main
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 17, in script call
+<<<<<<< HEAD
     call TiaDeCascais from _call_TiaDeCascais
   File "game/TiaDeCascais.rpy", line 3, in script
     if tia_points == 1:
@@ -25,8 +35,46 @@ Full traceback:
   File "game/TiaDeCascais.rpy", line 3, in <module>
     if tia_points == 1:
 NameError: name 'tia_points' is not defined
+=======
+    call begin_minigame
+  File "game/concoctioncafe.rpy", line 14, in script
+    call screen cafe_escolha
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\exports.py", line 3181, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 4253, in interact_core
+    rv = renpy.display.focus.mouse_handler(ev, x, y)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\focus.py", line 572, in mouse_handler
+    return change_focus(new_focus, default=default)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\focus.py", line 521, in change_focus
+    set_focused(current, newfocus.arg, newfocus.screen)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\focus.py", line 197, in set_focused
+    new_tooltip = widget._get_tooltip()
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\behavior.py", line 860, in _get_tooltip
+    return get_tooltip(self.action)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\behavior.py", line 372, in get_tooltip
+    rv = get_tooltip(i)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\behavior.py", line 382, in get_tooltip
+    return func()
+TypeError: get_tooltip() missing 1 required positional argument: 'self'
+>>>>>>> main
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
+<<<<<<< HEAD
 Sat Sep 17 18:45:29 2022
+=======
+Sat Sep 17 00:19:33 2022
+>>>>>>> main
