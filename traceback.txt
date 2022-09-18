@@ -3,34 +3,50 @@
 While running game code:
   File "game/script.rpy", line 17, in script call
     call begin_minigame
-  File "game/concoctioncafe.rpy", line 36, in script call
-    call compara_resposta
-  File "game/concoctioncafe.rpy", line 40, in script
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-  File "game/concoctioncafe.rpy", line 40, in <module>
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-NameError: name 'chantili' is not defined
+  File "game/concoctioncafe.rpy", line 14, in script
+    call screen cafe_escolha
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+TypeError: get_tooltip() missing 1 required positional argument: 'self'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 17, in script call
     call begin_minigame
-  File "game/concoctioncafe.rpy", line 36, in script call
-    call compara_resposta
-  File "game/concoctioncafe.rpy", line 40, in script
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/concoctioncafe.rpy", line 40, in <module>
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar and chantili == chantilly and cherry == cereja:
-NameError: name 'chantili' is not defined
+  File "game/concoctioncafe.rpy", line 14, in script
+    call screen cafe_escolha
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\exports.py", line 3181, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 4253, in interact_core
+    rv = renpy.display.focus.mouse_handler(ev, x, y)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\focus.py", line 572, in mouse_handler
+    return change_focus(new_focus, default=default)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\focus.py", line 521, in change_focus
+    set_focused(current, newfocus.arg, newfocus.screen)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\focus.py", line 197, in set_focused
+    new_tooltip = widget._get_tooltip()
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\behavior.py", line 860, in _get_tooltip
+    return get_tooltip(self.action)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\behavior.py", line 372, in get_tooltip
+    rv = get_tooltip(i)
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\display\behavior.py", line 382, in get_tooltip
+    return func()
+TypeError: get_tooltip() missing 1 required positional argument: 'self'
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
-Thu Sep 15 01:13:05 2022
+Sat Sep 17 00:19:33 2022

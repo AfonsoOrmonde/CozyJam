@@ -8,8 +8,8 @@ define e = Character("Eileen")
 # The game starts here.
 
 label start:
-    $acucar = 1
-    $cafe = 1
+    $acucar = 0
+    $cafe = 0
     $chantili = 0
     $leite = 0
     $cereja = 0

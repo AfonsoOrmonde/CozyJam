@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/concoctioncafe.rpy", line 40: reached end of line when expecting ':'.
-    if coffee == cafe and milk == leite and blend == blend_r and sugar == acucar
-                                                                                ^
-
-File "game/concoctioncafe.rpy", line 41: expected statement.
-    and chantili == chantilly and cherry == cereja:
+File "game/concoctioncafe.rpy", line 21: expected ':' not found.
+    label cafe_es
                  ^
 
-File "game/concoctioncafe.rpy", line 44: expected statement.
-    else:
-        ^
-
-File "game/concoctioncafe.rpy", line 49: expected ':' not found.
-    label end
-             ^
-
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Sep 15 01:07:42 2022
+Fri Sep 16 23:30:44 2022
