@@ -2,17 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/TiaDeCascais.rpy", line 8: expected ':' not found.
-    else
-        ^
+File "game/concoctioncafe.rpy", line 219: expected statement.
+    completed = true
+              ^
 
-File "game/TiaDeCascais.rpy", line 13: expected ':' not found.
-    else
-        ^
-
-File "game/TiaDeCascais.rpy", line 18: expected ':' not found.
-    else
-        ^
+File "game/concoctioncafe.rpy", line 222: expected statement.
+    completed = false
+              ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Sep 19 07:43:25 2022
+Tue Sep 20 11:50:40 2022

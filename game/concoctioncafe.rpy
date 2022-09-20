@@ -12,7 +12,7 @@ label begin_minigame:
     $chocolate = 0
     $marshmallow = 0
     $milk = 0
-    $completed = true
+    $completed = True
 
     "Main" "Ok let's do this. One normal coffee right away!"
 
@@ -216,9 +216,9 @@ screen additionals:
 label compara_resposta:
     if coffee == cafe and milk == leite and cinammon == canela and marshmallow == marxmallow and sugar == acucar and chantili == chantilly and cherry == cereja and chocolate == chocolate_r:
             "Main" "Yay i got it right!"
-            completed = true
+            $completed = True
     else:
             "Main" "Oh no! SOmething went wrong!"
-            completed = false
+            $completed = False
 
     jump begin_minigame
