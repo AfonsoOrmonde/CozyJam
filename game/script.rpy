@@ -7,10 +7,11 @@ label start:
     $cafe = 0
     $chantili = 0
     $leite = 0
-    $marshmallow = 0
-    $chocolate = 0
-    $cinnamon = 0
-    #call begin_minigame
+    $cereja = 0
+    $canela = 0
+    $marxmallow = 0
+    $chocolate_r = 0
+    call begin_minigame
 
 
     #------------------------------- ARC POINTS --------------------------------
