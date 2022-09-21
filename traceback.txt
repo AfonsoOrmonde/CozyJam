@@ -1,6 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "game/script.rpy", line 14, in script call
     call begin_minigame
   File "game/concoctioncafe.rpy", line 15, in script
@@ -8,10 +9,20 @@ While running game code:
   File "game/concoctioncafe.rpy", line 15, in <module>
     $completed = true
 NameError: name 'true' is not defined
+=======
+  File "game/script.rpy", line 50, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 3, in script
+    if day == 1:
+  File "game/TiaDeCascais.rpy", line 5, in <module>
+    elif dia == 2:
+NameError: name 'dia' is not defined
+>>>>>>> main
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/script.rpy", line 14, in script call
     call begin_minigame
   File "game/concoctioncafe.rpy", line 15, in script
@@ -23,8 +34,27 @@ Full traceback:
   File "game/concoctioncafe.rpy", line 15, in <module>
     $completed = true
 NameError: name 'true' is not defined
+=======
+  File "game/script.rpy", line 50, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 3, in script
+    if day == 1:
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/TiaDeCascais.rpy", line 5, in <module>
+    elif dia == 2:
+NameError: name 'dia' is not defined
+>>>>>>> main
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
+<<<<<<< HEAD
 Tue Sep 20 11:52:06 2022
+=======
+Wed Sep 21 10:24:42 2022
+>>>>>>> main
