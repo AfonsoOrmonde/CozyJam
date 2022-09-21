@@ -2,17 +2,23 @@
 errors listed below, and try again.
 
 
-File "game/TiaDeCascais.rpy", line 8: expected ':' not found.
-    else
-        ^
+The label _call_TiaDeCascais is defined twice, at File "game/script.rpy", line 48:
+    call TiaDeCascais from _call_TiaDeCascais
+and File "game/script.rpy", line 52:
+    call TiaDeCascais from _call_TiaDeCascais
 
-File "game/TiaDeCascais.rpy", line 13: expected ':' not found.
-    else
-        ^
 
-File "game/TiaDeCascais.rpy", line 18: expected ':' not found.
-    else
-        ^
+The label _call_TiaDeCascais is defined twice, at File "game/script.rpy", line 52:
+    call TiaDeCascais from _call_TiaDeCascais
+and File "game/script.rpy", line 56:
+    call TiaDeCascais from _call_TiaDeCascais
+
+
+The label _call_TiaDeCascais is defined twice, at File "game/script.rpy", line 56:
+    call TiaDeCascais from _call_TiaDeCascais
+and File "game/script.rpy", line 60:
+    call TiaDeCascais from _call_TiaDeCascais
+
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Sep 19 07:43:25 2022
+Wed Sep 21 08:09:37 2022
