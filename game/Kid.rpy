@@ -7,10 +7,13 @@ label kid:
             call kid_2_1
         else:
             call kid_2_2
+    if day == 3:
+        if kid_points == 2:
+            call kid_3_1
+        else:
+            call kid_3_2
 
     return
-
-
 
 
 
@@ -188,8 +191,8 @@ label kid_2_1:
     Kid"..."
     menu:
         "...":
-        Kid "Hehe, yep I'm really starting to get you."
-        "{i} I think I'm the one starting to get you."
+            Kid "Hehe, yep I'm really starting to get you."
+            "{i} I think I'm the one starting to get you."
 
         "Hello the-":
             hide kid_normal
@@ -315,8 +318,8 @@ label kid_2_2:
     Kid"..."
     menu:
         "...":
-        Kid "Hehe, yep I'm really starting to get you."
-        "{i} I think I'm the one starting to get you."
+            Kid "Hehe, yep I'm really starting to get you."
+            "{i} I think I'm the one starting to get you."
 
         "Hello the-":
             hide kid_normal
@@ -432,7 +435,224 @@ label kid_2_2:
     hide kid_normal
     return
 
-label kid_3:
+label kid_3_1:
+    "{i}Hmm it's quite now."
+    "{i}There's something missing, something... noisy."
+    John"HEYYYYYYYYYYYYYY!"
+    "{i} I knew it."
+    show kid_happy in Position(xpos = 0.7) with hpunch
+    John"How are you doing coffee hero?!"
+    menu:
+        "Hi kiddo":
+            John "Awwww, c'mon I'm not a kid I'm your partner"
+            hide kid_happy
+            show kid_normal in Position(xpos = 0.7)
+
+        "Hi John":
+            hide kid_happy
+            show kid_disgusted in Position(xpos = 0.7)
+            John "Ahhhhh, I can't get used to yu calling me that."
+            hide kid disgusted
+            show kid_normal in Position(xpos = 0.7)
+
+        "Hi Dream":
+            John"Hello hero!! You remembered my name"
+            hide kid_happy
+            show kid_normal in Position(xpos = 0.7)
+
+        "...":
+            John"One day hero, one day I wil get a reaction from you!"
+            hide kid_happy
+            show kid_normal in Position(xpos = 0.7)
+    John "Oh yeah here."
+    Mc "Oh, you decided to pay."
+    John "Yeah, nana gave me an earful when I came back yesterday and still had the money."
+    John "I sweear it wasn't on purpose!"
+    "{i} Should I ask?"
+
+    menu:
+        "How is your nana?":
+            John "What? Oh she is a-okay! Feeling much better after your coffee! Hehe."
+            Mc "I see, I'm glad."
+            menu:
+                "When will she leave the hospital?":
+                    John "Hmmmmm. We still don't know, could be a while though."
+                    Mc "Hm..."
+                    menu:
+                        "Why is she there?":
+                            hide kid_normal
+                            show kid_sad at Position(xpos = 0.70)
+                            John "..."
+                            "{i} Maybe too soon..."
+                            Mc "Well what is it gonna be today?"
+                        "{i}Better leave it at that.":
+                            Mc "Well what is it gonna be today?"
+                            hide kid_sad
+                            show kid_normal at Position(xpos = 0.70)
+
+
+    John"Oh yeah I forgot!"
+    John"Do you see this?"
+    Mc "Yeah, the necklace."
+    John "YES! My nana gave it to me."
+    Mc "Oh ok."
+    Mc "This gonna be another sto-"
+    hide kid_normal
+    show kid_happy at Position(xpos = 0.70) with hpunch
+    John "SO ANYWAY!!!!"
+    "{i}Called it."
+    John "Yesterday my nana told me a dinossaur story."
+    John "She said it was a reward for bringing her coffee so she told me the story of the hero again."
+    John "Supposedlyyyy, the hero's wish was to save the queen's grandson from this big evil dinossaur!"
+    Mc "Dont you mean drag-"
+    hide kid_happy
+    show kid_happy at Position(xpos = 0.70) with hpunch
+    John "DINOSSAUR!!!"
+    Mc "Oooook then."
+    hide kid_happy
+    show kid_normal at Position(xpos = 0.70)
+    John "The hero was given by the coffee mug a super bitter coffee that was disguised with sweetness."
+    John "It is said that the coffee was super bitter but then had this white foam on top and chocolate as well!"
+    John "HOW COOL IS THAT!!"
+    John "Nana said i could only know the rest of the story if I brought her the drink though!"
+    John "I'm counting on you coffee hero!!"
+
+    call begin_minigame
+    call compara_kid3
+
+    if completed == 1:
+        $kid_points += 1
+
+        hide kid_normal
+        show kid_drinking at Position(xpos = 0.70)
+        John "Hmmmmm!"
+        hide kid_drinking
+        show kid_happy at Position(xpos = 0.70) with hpunch
+        John "Yep this must be it!!!"
+        John "Good job coffee hero!"
+        Mc "I'm glad I got it right."
+        John "Ok hero I gotta run. Way too curious about the ending of the story!"
+        Mc "Payment."
+        John "Oh... you're right. There you go!"
+        Mc "Thank you!"
+        hide kid_happy
+        show kid_sad at Position(xpos = 0.70)
+        John "Oh and ummm. Coffee hero?"
+        Mc "Yes?"
+        John "Have you ever... lost something forcefully?"
+        Mc "How so?"
+        John "Like you never did anything to lose it."
+        John "And... you can't do anything while you lose it..."
+        menu:
+            "Is everything ok?":
+                John "Just... forget it. It's nothing."
+                hide kid_sad
+                show kid_happy at Position(xpos = 0.70)
+                John "Bye Hero!"
+                hide kid_happy
+
+            "Yes, I have.":
+                John "Hm... I see. Did you find it?"
+                menu:
+                    "No.":
+                        John "I see..."
+                        hide kid_sad
+                        show kid_happy at Position(xpos = 0.70)
+                        John "Well I gotta go!"
+                        John "Bye Hero!"
+                        hide kid_happy
+
+                    "Yes":
+                        hide kid_sad
+                        show kid_happy at Position(xpos = 0.70)
+                        John "That's good! That's very good!"
+                        John "Well I gotta go!"
+                        John "Bye Hero!"
+                        hide kid_happy
+
+
+            "No I haven't.":
+                John "Oh... I'm sorry I asked a weird question."
+                hide kid_sad
+                show kid_happy at Position(xpos = 0.70)
+                John "Well I gotta go!"
+                John "Bye Hero!"
+                hide kid_happy
+
+            "...":
+                John "Well I can never get a word out of you can I, hehe."
+                hide kid_sad
+                show kid_happy at Position(xpos = 0.70)
+                John "Well I gotta go!"
+                John "Bye Hero!"
+                hide kid_happy
+
+        if completed == 0:
+            hide kid_normal
+            show kid_drinking at Position(xpos = 0.70)
+            John "Hmmmmm!"
+            hide kid_drinking
+            show kid_sad at Position(xpos = 0.70)
+            John "I don't think this is it."
+            Mc "I'm sorry little guy..."
+            hide kid_sad
+            show kid_normal at Position(xpos = 0.70)
+            John "Oh no problem. Nana probably wants this as well. She will be happy don't worry!"
+            Mc "But what about the story?"
+            John "Dont worry really. She might tell me a new one!"
+            Mc "You are always happy huh?"
+            John "I... I guess."
+            John "Welp, gotta run! Nana doesn't like cold drinks!"
+            hide kid_happy
+            show kid_sad at Position(xpos = 0.70)
+            John "Oh and ummm. Coffee hero?"
+            Mc "Yes?"
+            John "Have you ever... lost something forcefully?"
+            Mc "How so?"
+            John "Like you never did anything to lose it."
+            John "And... you can't do anything while you lose it..."
+            John "You know what forget I asked!"
+            hide kid_sad
+            Mc "Hey wai-"
+
+        "{i} And he's gone. There's something more about him."
+        return
+
+    return
+
+label kid_3_2:
+    "{i}Hmm it's quite now."
+    "{i}There's something missing, something... noisy."
+    John"HEYYYYYYYYYYYYYY!"
+    "{i} I knew it."
+    show kid_happy in Position(xpos = 0.7) with hpunch
+    John"How are you doing coffee hero?!"
+    menu:
+        "Hi kiddo":
+            John "Awwww, c'mon I'm not a kid I'm your partner"
+            hide kid_happy
+            show kid_normal in Position(xpos = 0.7)
+
+        "Hi John":
+            hide kid_happy
+            show kid_disgusted in Position(xpos = 0.7)
+            John "Ahhhhh, I can't get used to yu calling me that."
+            hide kid disgusted
+            show kid_normal in Position(xpos = 0.7)
+
+        "Hi Dream":
+            John"Hello hero!! You remembered my name"
+            hide kid_happy
+            show kid_normal in Position(xpos = 0.7)
+
+        "...":
+            John"One day hero, one day I wil get a reaction from you!"
+            hide kid_happy
+            show kid_normal in Position(xpos = 0.7)
+    John "Oh yeah here."
+    Mc "Oh, you decided to pay."
+    John "Yeah, nana gave me an earful when I came back yesterday and still had the money."
+    John "I sweear it wasn't on purpose!"
 
     return
 

@@ -290,14 +290,13 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
-
+        
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            #textbutton _("Start") action Start()
+            imagebutton auto "gui/start_%s.png" xpos 830 ypos 163 focus_mask True action Start()
 
         else:
 
@@ -305,9 +304,11 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        #textbutton _("Load") action ShowMenu("load")
+        imagebutton auto "gui/load2_%s.png" xpos 827 ypos 160 focus_mask True action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        #textbutton _("Preferences") action ShowMenu("preferences")
+        imagebutton auto "gui/preferences_%s.png" xpos 827 ypos 165 focus_mask True action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -317,18 +318,21 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        #textbutton _("About") action ShowMenu("about")7
+        imagebutton auto "gui/about_%s.png" ypos 175 xpos 837 focus_mask True action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            #textbutton _("Help") action ShowMenu("help")
+            imagebutton auto "gui/help_%s.png" xpos 818 ypos 188 focus_mask True action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            #textbutton _("Quit") action Quit(confirm=not main_menu)
+            imagebutton auto "gui/quit_%s.png" ypos 178 xpos 825 focus_mask True action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -385,7 +389,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0

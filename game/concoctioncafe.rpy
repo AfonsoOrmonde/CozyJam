@@ -4,18 +4,19 @@ label begin_minigame:
     $sugar = 0
     $chantilly = 0
     $cherry = 0
-    $cinammon = 0
+    $cinnamon = 0
     $chocolate = 0
     $marshmallow = 0
     $milk = 0
+    $no_toppings = 0
 
     $completed = 0
 
-    $ coffee_none_idle = "coffee_1_idle.png"
+    $ coffee_none_idle = "cross_idle.png"
     $ coffee_1_idle = "coffee_1_idle.png"
     $ coffee_2_idle = "coffee_2_idle.png"
     $ coffee_3_idle = "coffee_3_idle.png"
-    $ sugar_none_idle = "coffee_1_idle.png"
+    $ sugar_none_idle = "cross_idle.png"
     $ sugar_1_idle = "sugar_1_idle.png"
     $ sugar_2_idle = "sugar_2_idle.png"
     $ sugar_3_idle = "sugar_3_idle.png"
@@ -26,14 +27,14 @@ label begin_minigame:
     $ cinnamon_idle = "cinnamon_idle.png"
     $ chantilly_idle = "chantilly_idle.png"
     $ marshmallow_idle = "marshmallow_idle.png"
-    $ cherry_idle = "coffee_1_idle.png"
-    $ no_toppings_idle = "coffee_1_idle.png"
+    $ cherry_idle = "cherry_idle.png"
+    $ no_toppings_idle = "cross_idle.png"
 
-    $ coffee_none_hover = "coffee_1_hover.png"
+    $ coffee_none_hover = "cross_hover.png"
     $ coffee_1_hover = "coffee_1_hover.png"
     $ coffee_2_hover= "coffee_2_hover.png"
     $ coffee_3_hover = "coffee_3_hover.png"
-    $ sugar_none_hover = "coffee_1_hover.png"
+    $ sugar_none_hover = "cross_hover.png"
     $ sugar_1_hover = "sugar_1_hover.png"
     $ sugar_2_hover = "sugar_2_hover.png"
     $ sugar_3_hover = "sugar_3_hover.png"
@@ -44,14 +45,19 @@ label begin_minigame:
     $ cinnamon_hover = "cinnamon_hover.png"
     $ chantilly_hover = "chantilly_hover.png"
     $ marshmallow_hover = "marshmallow_hover.png"
-    $ cherry_hover = "coffee_1_hover.png"
-    $ no_toppings_hover = "coffee_1_hover.png"
+    $ cherry_hover = "cherry_hover.png"
+    $ no_toppings_hover = "cross_hover.png"
 
+    stop music fadeout 1
     call screen cafe_escolha
     call screen acucar_escolha
     call screen leite_escolha
     call screen chocolate_escolha
     call screen additionals
+
+    scene black
+    play sound "audio/liquid_pouring.mp3" noloop
+    $ renpy.pause (4.0, hard=True)
 
     return
 
@@ -60,8 +66,8 @@ screen cafe_escolha:
     imagebutton:
         xanchor 0
         yanchor 0
-        xpos 180
-        ypos -240
+        xpos -1300
+        ypos 50
         idle coffee_none_idle
         hover coffee_none_hover
         focus_mask True
@@ -75,7 +81,7 @@ screen cafe_escolha:
         idle coffee_1_idle
         hover coffee_1_hover
         focus_mask True
-        action [SetVariable("coffee", coffee+1), Return()]
+        action [SetVariable("coffee", coffee+1), Play("sound", "audio/coffee_grains.mp3"), Queue("sound", "audio/coffee_machine.mp3"), Return()]
 
     imagebutton:
         xanchor 0.5
@@ -85,7 +91,7 @@ screen cafe_escolha:
         idle coffee_2_idle
         hover coffee_2_hover
         focus_mask True
-        action [SetVariable("coffee", coffee+2), Return()]
+        action [SetVariable("coffee", coffee+2), Play("sound", "audio/coffee_grains.mp3"), Queue("sound", "audio/coffee_machine.mp3"), Return()]
 
     imagebutton:
         xanchor 0
@@ -95,15 +101,15 @@ screen cafe_escolha:
         idle coffee_3_idle
         hover coffee_3_hover
         focus_mask True
-        action [SetVariable("coffee", coffee+3), Return()]
+        action [SetVariable("coffee", coffee+3), Play("sound", "audio/coffee_grains.mp3"), Queue("sound", "audio/coffee_machine.mp3"), Return()]
 
 screen acucar_escolha:
 
     imagebutton:
         xanchor 0
         yanchor 0.5
-        xpos 200
-        ypos 0.28
+        xpos -1300
+        ypos 600
         idle sugar_none_idle
         hover sugar_none_hover
         focus_mask True
@@ -117,7 +123,7 @@ screen acucar_escolha:
         idle sugar_1_idle
         hover sugar_1_hover
         focus_mask True
-        action [SetVariable("sugar", sugar+1),  Return()]
+        action [SetVariable("sugar", sugar+1), Play("audio", "audio/sugar.mp3"), Return()]
 
     imagebutton:
         xanchor 0
@@ -127,7 +133,7 @@ screen acucar_escolha:
         idle sugar_2_idle
         hover sugar_2_hover
         focus_mask True
-        action [SetVariable("sugar", sugar+2),  Return()]
+        action [SetVariable("sugar", sugar+2), Play("audio", "audio/sugar.mp3"), Return()]
 
     imagebutton:
         xanchor 0
@@ -137,7 +143,7 @@ screen acucar_escolha:
         idle sugar_3_idle
         hover sugar_3_hover
         focus_mask True
-        action [SetVariable("sugar", sugar+3), Return()]
+        action [SetVariable("sugar", sugar+3), Play("audio", "audio/sugar.mp3"), Return()]
 
 screen leite_escolha:
 
@@ -149,7 +155,7 @@ screen leite_escolha:
             idle milk_idle
             hover milk_hover
             focus_mask True
-            action [SetVariable("milk", milk+1),  Return()]
+            action [SetVariable("milk", milk+1), Play("audio", "audio/milk.mp3"),  Return()]
 
         imagebutton:
             xanchor 0
@@ -188,8 +194,8 @@ screen additionals:
     imagebutton:
         xanchor 0
         yanchor 0.5
-        xpos 400
-        ypos 0.28
+        xpos -1150
+        ypos 425
         idle cherry_idle
         hover cherry_hover
         focus_mask True
@@ -223,17 +229,17 @@ screen additionals:
         idle cinnamon_idle
         hover cinnamon_hover
         focus_mask True
-        action [SetVariable("cinammon", cinammon+1), Return()]
+        action [SetVariable("cinnamon", cinnamon+1), Return()]
 
     imagebutton:
         xanchor 0
         yanchor 0
-        xpos 50
-        ypos -230
+        xpos -1350
+        ypos 75
         idle no_toppings_idle
         focus_mask True
         hover no_toppings_hover
-        action  Return()
+        action  [SetVariable("no_toppings", no_toppings+1), Return()]
 
         #adicionar imagebutton separado de choolate e de uma opcao de de nenhum additional
 
@@ -263,23 +269,26 @@ screen additionals:
 
 
 
-#label compara_resposta:
-#    if coffee == cafe and milk == leite and cinammon == canela and marshmallow == marxmallow and sugar == acucar and chantili == chantilly and cherry == cereja and chocolate == chocolate_r:
-#            $ completed = 1
-#    else:
-#            $ completed = 0
-#    jump begin_minigame
-
 label compara_kid1:
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 1:
+    if coffee == 0 and milk == 1 and cinnamon == 0 and marshmallow == 1 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 1:
             $ completed = 1
     else:
             $ completed = 0
 
     return
 
-label compara_kid1:
-    if coffee == 3 and milk == 0 and cinammon == 1 and marshmallow == 0 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 0:
+
+label compara_kid2:
+    if coffee == 3 and milk == 0 and cinnamon == 1 and marshmallow == 0 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 0:
+            $ completed = 1
+    else:
+            $ completed = 0
+
+    return
+
+
+label compara_kid3:
+    if coffee == 3 and milk == 0 and cinammon == 0 and marshmallow == 0 and sugar == 0 and chantilly == 1 and cherry == 0 and chocolate == 1:
             $ completed = 1
     else:
             $ completed = 0
@@ -297,7 +306,7 @@ label compara_tia1:
     return
 
 label compara_tia2:
-    if (coffee == 1 and (sugar == 2) and (chocolate == 1 or chantilly == 1 or marshmallow == 1)) or (coffee == 2 and (sugar == 3 or sugar == 2) and (chocolate == 1 or chantilly == 1 or marshmallow == 1)):
+    if (coffee == 1 and (sugar == 2) and (chocolate == 1 or chantilly == 1 or marshmallow == 1 or no_toppings == 1)) or (coffee == 2 and (sugar == 3 or sugar == 2) and (chocolate == 1 or chantilly == 1 or marshmallow == 1 or no_toppings == 1)):
         $ completed = 1
     else:
         $ completed = 0
@@ -305,7 +314,7 @@ label compara_tia2:
     return
 
 label compara_tia3:
-    if ((coffee == 1 or coffee == 2 or coffee = 3) and sugar == 1 and milk == 1 and chocolate == 0 and chantilly == 0 and marshmallow == 0):
+    if (coffee == 1 or coffee == 2 or coffee == 3) and sugar == 1 and milk == 1 and chocolate == 0 and chantilly == 0 and marshmallow == 0 and cinnamon == 1:
         $ completed = 1
     else:
         $ completed = 0
@@ -317,5 +326,34 @@ label compara_tia4:
         $ completed = 1
     else:
         $ completed = 0
+
+    return
+
+
+label compara_girl1:
+    if coffee == 3 and sugar == 0 and milk == 0 and chocolate == 0:
+        $completed = 1
+    else:
+        $completed = 0
+
+    return
+
+label compara_girl2:
+    if (coffee == 3 or coffee == 2) and sugar == 1 and milk == 0 and cherry == 1:
+        $completed = 1
+    else:
+        $completed = 0
+
+    return
+
+label compara_girl3:
+    if (coffee == 2 or coffee == 1) and (sugar == 0 or sugar == 1 or sugar == 2):
+        $completed = 1
+    else:
+        $completed = 0
+
+    return
+
+label commpara_girl4:
 
     return

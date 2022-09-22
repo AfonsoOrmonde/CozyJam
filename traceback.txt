@@ -1,40 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 51, in script call
-    call kid
-  File "game/Kid.rpy", line 4, in script call
-    call kid_1
-  File "game/Kid.rpy", line 105, in script call
-    call compara_kid1
-  File "game/concoctioncafe.rpy", line 274, in script
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-  File "game/concoctioncafe.rpy", line 274, in <module>
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-NameError: name 'chantili' is not defined
+  File "renpy/common/00start.rpy", line 215, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 517, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 517, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 51, in script call
-    call kid
-  File "game/Kid.rpy", line 4, in script call
-    call kid_1
-  File "game/Kid.rpy", line 105, in script call
-    call compara_kid1
-  File "game/concoctioncafe.rpy", line 274, in script
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/concoctioncafe.rpy", line 274, in <module>
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-NameError: name 'chantili' is not defined
+  File "renpy/common/00start.rpy", line 215, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 517, in script
+    python hide:
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 517, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\loadsave.py", line 769, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\rollback.py", line 1078, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\rollback.py", line 889, in rollback
+    self.load_failed()
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\rollback.py", line 807, in load_failed
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
-Thu Sep 22 01:27:04 2022
+Thu Sep 22 16:43:33 2022

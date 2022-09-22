@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Kid.rpy", line 109: choice menuitem expects a non-empty block.
-    "You're welcome.":
-                      ^
+File "game/Kid.rpy", line 474: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "How is your nana?"
+                       ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Sep 22 01:07:54 2022
+Fri Sep 23 00:25:35 2022
