@@ -8,7 +8,11 @@ label kid:
         else:
             call kid_2_2
     if day == 3:
+<<<<<<< HEAD
         if kid_points == 2:
+=======
+        if kid_points == 2
+>>>>>>> main
             call kid_3_1
         else:
             call kid_3_2
@@ -435,6 +439,11 @@ label kid_2_2:
     hide kid_normal
     return
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main
 label kid_3_1:
     "{i}Hmm it's quite now."
     "{i}There's something missing, something... noisy."
@@ -471,7 +480,11 @@ label kid_3_1:
     "{i} Should I ask?"
 
     menu:
+<<<<<<< HEAD
         "How is your nana?":
+=======
+        "How is your nana?"
+>>>>>>> main
             John "What? Oh she is a-okay! Feeling much better after your coffee! Hehe."
             Mc "I see, I'm glad."
             menu:
@@ -618,9 +631,14 @@ label kid_3_1:
         "{i} And he's gone. There's something more about him."
         return
 
+<<<<<<< HEAD
     return
 
 label kid_3_2:
+=======
+label kid_3_2:
+
+>>>>>>> main
     "{i}Hmm it's quite now."
     "{i}There's something missing, something... noisy."
     John"HEYYYYYYYYYYYYYY!"
@@ -653,6 +671,12 @@ label kid_3_2:
     Mc "Oh, you decided to pay."
     John "Yeah, nana gave me an earful when I came back yesterday and still had the money."
     John "I sweear it wasn't on purpose!"
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> main
 
     return
 

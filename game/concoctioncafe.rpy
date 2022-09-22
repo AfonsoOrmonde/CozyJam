@@ -269,6 +269,16 @@ screen additionals:
 
 
 
+<<<<<<< HEAD
+=======
+#label compara_resposta:
+#    if coffee == cafe and milk == leite and cinnamon == canela and marshmallow == marxmallow and sugar == acucar and chantili == chantilly and cherry == cereja and chocolate == chocolate_r:
+#            $ completed = 1
+#    else:
+#            $ completed = 0
+#    jump begin_minigame
+
+>>>>>>> main
 label compara_kid1:
     if coffee == 0 and milk == 1 and cinnamon == 0 and marshmallow == 1 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 1:
             $ completed = 1
@@ -277,6 +287,7 @@ label compara_kid1:
 
     return
 
+<<<<<<< HEAD
 
 label compara_kid2:
     if coffee == 3 and milk == 0 and cinnamon == 1 and marshmallow == 0 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 0:
@@ -286,6 +297,19 @@ label compara_kid2:
 
     return
 
+
+label compara_kid3:
+    if coffee == 3 and milk == 0 and cinammon == 0 and marshmallow == 0 and sugar == 0 and chantilly == 1 and cherry == 0 and chocolate == 1:
+=======
+label compara_kid2:
+    if coffee == 3 and milk == 0 and cinammon == 1 and marshmallow == 0 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 0:
+>>>>>>> main
+            $ completed = 1
+    else:
+            $ completed = 0
+
+    return
+'''
 
 label compara_kid3:
     if coffee == 3 and milk == 0 and cinammon == 0 and marshmallow == 0 and sugar == 0 and chantilly == 1 and cherry == 0 and chocolate == 1:
@@ -329,7 +353,10 @@ label compara_tia4:
 
     return
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 label compara_girl1:
     if coffee == 3 and sugar == 0 and milk == 0 and chocolate == 0:
         $completed = 1
@@ -347,10 +374,13 @@ label compara_girl2:
     return
 
 label compara_girl3:
+<<<<<<< HEAD
     if (coffee == 2 or coffee == 1) and (sugar == 0 or sugar == 1 or sugar == 2):
         $completed = 1
     else:
         $completed = 0
+=======
+>>>>>>> main
 
     return
 

@@ -1,6 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "renpy/common/00start.rpy", line 215, in script call
     call _load_reload_game from _call__load_reload_game_1
   File "renpy/common/00keymap.rpy", line 517, in script
@@ -10,10 +11,26 @@ While running game code:
   File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
     renpy.load(renpy.session["_reload_slot"])
 Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+=======
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+ScriptError: could not find label 'comapra_tia4'.
+>>>>>>> main
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "renpy/common/00start.rpy", line 215, in script call
     call _load_reload_game from _call__load_reload_game_1
   File "renpy/common/00keymap.rpy", line 517, in script
@@ -35,8 +52,31 @@ Full traceback:
   File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\rollback.py", line 807, in load_failed
     raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
 Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+=======
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'comapra_tia4'.
+>>>>>>> main
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
+<<<<<<< HEAD
 Thu Sep 22 16:43:33 2022
+=======
+Thu Sep 22 09:54:52 2022
+>>>>>>> main

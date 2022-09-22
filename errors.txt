@@ -2,9 +2,18 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
 File "game/Kid.rpy", line 474: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
     "How is your nana?"
                        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
 Fri Sep 23 00:25:35 2022
+=======
+File "game/Girl.rpy", line 25: end of line expected.
+    show girl_normal with dissolve at Position(xpos = 0.20)
+                                   ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Thu Sep 22 07:36:05 2022
+>>>>>>> main
