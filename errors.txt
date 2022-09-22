@@ -2,36 +2,9 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/concoctioncafe.rpy", line 219: expected statement.
-    completed = true
-              ^
-
-File "game/concoctioncafe.rpy", line 222: expected statement.
-    completed = false
-              ^
+File "game/Kid.rpy", line 109: choice menuitem expects a non-empty block.
+    "You're welcome.":
+                      ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Sep 20 11:50:40 2022
-=======
-The label _call_TiaDeCascais is defined twice, at File "game/script.rpy", line 48:
-    call TiaDeCascais from _call_TiaDeCascais
-and File "game/script.rpy", line 52:
-    call TiaDeCascais from _call_TiaDeCascais
-
-
-The label _call_TiaDeCascais is defined twice, at File "game/script.rpy", line 52:
-    call TiaDeCascais from _call_TiaDeCascais
-and File "game/script.rpy", line 56:
-    call TiaDeCascais from _call_TiaDeCascais
-
-
-The label _call_TiaDeCascais is defined twice, at File "game/script.rpy", line 56:
-    call TiaDeCascais from _call_TiaDeCascais
-and File "game/script.rpy", line 60:
-    call TiaDeCascais from _call_TiaDeCascais
-
-
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Sep 21 08:09:37 2022
->>>>>>> main
+Thu Sep 22 01:07:54 2022

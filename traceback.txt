@@ -1,60 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-<<<<<<< HEAD
-  File "game/script.rpy", line 14, in script call
-    call begin_minigame
-  File "game/concoctioncafe.rpy", line 15, in script
-    $completed = true
-  File "game/concoctioncafe.rpy", line 15, in <module>
-    $completed = true
-NameError: name 'true' is not defined
-=======
-  File "game/script.rpy", line 50, in script call
-    call TiaDeCascais
-  File "game/TiaDeCascais.rpy", line 3, in script
-    if day == 1:
-  File "game/TiaDeCascais.rpy", line 5, in <module>
-    elif dia == 2:
-NameError: name 'dia' is not defined
->>>>>>> main
+  File "game/script.rpy", line 51, in script call
+    call kid
+  File "game/Kid.rpy", line 4, in script call
+    call kid_1
+  File "game/Kid.rpy", line 105, in script call
+    call compara_kid1
+  File "game/concoctioncafe.rpy", line 274, in script
+    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
+  File "game/concoctioncafe.rpy", line 274, in <module>
+    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
+NameError: name 'chantili' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-<<<<<<< HEAD
-  File "game/script.rpy", line 14, in script call
-    call begin_minigame
-  File "game/concoctioncafe.rpy", line 15, in script
-    $completed = true
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/concoctioncafe.rpy", line 15, in <module>
-    $completed = true
-NameError: name 'true' is not defined
-=======
-  File "game/script.rpy", line 50, in script call
-    call TiaDeCascais
-  File "game/TiaDeCascais.rpy", line 3, in script
-    if day == 1:
-  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 2115, in execute
+  File "game/script.rpy", line 51, in script call
+    call kid
+  File "game/Kid.rpy", line 4, in script call
+    call kid_1
+  File "game/Kid.rpy", line 105, in script call
+    call compara_kid1
+  File "game/concoctioncafe.rpy", line 274, in script
+    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
     if renpy.python.py_eval(condition):
-  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1092, in py_eval
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/TiaDeCascais.rpy", line 5, in <module>
-    elif dia == 2:
-NameError: name 'dia' is not defined
->>>>>>> main
+  File "game/concoctioncafe.rpy", line 274, in <module>
+    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
+NameError: name 'chantili' is not defined
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
-<<<<<<< HEAD
-Tue Sep 20 11:52:06 2022
-=======
-Wed Sep 21 10:24:42 2022
->>>>>>> main
+Thu Sep 22 01:27:04 2022

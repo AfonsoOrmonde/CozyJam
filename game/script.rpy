@@ -1,7 +1,6 @@
 ﻿define e = Character("Eileen")
 
 
-
 label start:
 
 
@@ -17,6 +16,7 @@ label start:
     define Uk = Character("?", who_color="#cc9741")
     define Tc = Character("Susan", who_color="#cc9741")
     define Kid = Character("Kid", who_color="#cc9741")
+    define John = Character("John", who_color="#cc9741")
     define Phy = Character("Girl", who_color="#cc9741")
     define Co = Character("Little Cookie", who_color="#cc9741")
 
@@ -49,10 +49,12 @@ label start:
     #----------------------------- DAY MANAGMENT -------------------------------
     # DAY 1
     call TiaDeCascais from _call_TiaDeCascais
+    call kid
+    $ day += 1
 
     # DAY 2
     call TiaDeCascais
-
+    call kid
     # DAY 3
     call TiaDeCascais
 

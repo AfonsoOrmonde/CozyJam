@@ -263,15 +263,28 @@ screen additionals:
 
 
 
-label compara_resposta:
-    if coffee == cafe and milk == leite and cinammon == canela and marshmallow == marxmallow and sugar == acucar and chantili == chantilly and cherry == cereja and chocolate == chocolate_r:
-            "Main" "Yay i got it right!"
+#label compara_resposta:
+#    if coffee == cafe and milk == leite and cinammon == canela and marshmallow == marxmallow and sugar == acucar and chantili == chantilly and cherry == cereja and chocolate == chocolate_r:
+#            $ completed = 1
+#    else:
+#            $ completed = 0
+#    jump begin_minigame
+
+label compara_kid1:
+    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 1:
             $ completed = 1
     else:
-            "Main" "Oh no! Something went wrong!"
             $ completed = 0
 
-    jump begin_minigame
+    return
+
+label compara_kid1:
+    if coffee == 3 and milk == 0 and cinammon == 1 and marshmallow == 0 and sugar == 0 and chantilly == 0 and cherry == 0 and chocolate == 0:
+            $ completed = 1
+    else:
+            $ completed = 0
+
+    return
 
 
 
@@ -292,7 +305,7 @@ label compara_tia2:
     return
 
 label compara_tia3:
-    if ((coffee == 1 orcoffee == 2 or coffee = 3) and sugar == 1 and milk == 1 and chocolate == 0 and chantilly == 0 and marshmallow == 0):
+    if ((coffee == 1 or coffee == 2 or coffee = 3) and sugar == 1 and milk == 1 and chocolate == 0 and chantilly == 0 and marshmallow == 0):
         $ completed = 1
     else:
         $ completed = 0

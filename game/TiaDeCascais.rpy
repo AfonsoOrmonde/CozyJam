@@ -23,7 +23,6 @@ label TiaDeCascais:
 
 label TiaDeCascais_1:
 
-    $ day += 1
     scene general_background with dissolve
     show tia_sassy at Position(xpos = 0.70) with dissolve
 
@@ -180,8 +179,6 @@ label TiaDeCascais_1:
     Tc "Goodbye darling!"
 
     hide tia_sassy with dissolve
-    scene black with dissolve
-
     return
 
 
