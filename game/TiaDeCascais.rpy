@@ -25,6 +25,7 @@ label TiaDeCascais_1:
 
     scene general_background with dissolve
     show tia_sassy at Position(xpos = 0.70) with dissolve
+    play music "audio/lofi_diogo.mp3" loop fadein 2
 
     Uk "Hello, Darling!"
     Mc "Hello Ma’am. How are you today?"
@@ -102,7 +103,9 @@ label TiaDeCascais_1:
 
     call begin_minigame
     call compara_tia1
-    scene general_background
+    scene general_background with dissolve
+    play music "audio/lofi_diogo.mp3" loop fadein 2
+
 
     if completed == 1:
         $ tia_points += 1
@@ -165,6 +168,8 @@ label TiaDeCascais_1:
     if completed == 0:
         Uk "Even though it wasn’t the way I wanted."
 
+    play sound "audio/coins.mp3" noloop
+
     Uk "Here’s the money."
     Mc "Thank you so much."
 
@@ -185,8 +190,7 @@ label TiaDeCascais_1:
 label TiaDeCascais_2_1:
     # points accepted: 1
 
-    $ day += 1
-    scene general_background
+    scene general_background with dissolve
     show tia_happy at Position(xpos = 0.456) with dissolve
 
     Tc "Well, hello!"
@@ -203,6 +207,7 @@ label TiaDeCascais_2_1:
     show tia_happy at Position(xpos = 0.456)
 
     Tc "But besides that, everything’s going well."
+    Tc "On the most part I guess."
 
     menu:
         "How was the party?":
@@ -274,13 +279,14 @@ label TiaDeCascais_2_1:
     "{i}I guess not me."
     Tc "Do you get what I’m saying?"
     Mc "So, less sweet than yesterday, but still sweet."
-    Tc "Yes, but the sweet part is important."
+    Tc "Yes, the sweet part is important."
     Tc "And put something sweet on top too please."
     Mc "Ok, just a second."
 
-    call coffee_begin
+    call begin_minigame
     call compara_tia2
-    scene general_background
+    scene general_background with dissolve
+    play music "audio/lofi_diogo.mp3" loop fadein 2
 
     if completed == 1:
         $ tia_points += 1
@@ -316,6 +322,9 @@ label TiaDeCascais_2_1:
 
         Tc "Business is hard. Keep your head up."
         Mc "Will do ma’am."
+
+        play sound "audio/coins.mp3" noloop
+
         Tc "Here’s the money."
         Mc "Thank you, let me just grab the change."
         Tc "No need darling."
@@ -337,7 +346,7 @@ label TiaDeCascais_2_1:
         Tc "This is far from the sweetness I asked for."
         Tc "Don’t you think Little Cookie?."
         Tc "You can smell it, can you?"
-        Ck "..."
+        Co "..."
         Mc "I’m really sorry ma’am!"
         Mc "I thought it would be the right amount."
         Mc "I guess I was wrong."
@@ -359,6 +368,9 @@ label TiaDeCascais_2_1:
         Mc "I know. I’ve been trying. Thank you."
         Tc "I see, I see."
         Tc "Well, I have parties to attend, so I can’t be here much longer."
+
+        play sound "audio/coins.mp3" noloop
+
         Tc "Here’s your money."
         Tc "I’ll see you tomorrow."
         Mc "See you tomorrow Mrs. Susan."
@@ -372,8 +384,7 @@ label TiaDeCascais_2_1:
 label TiaDeCascais_2_2:
     # points accepted: 0
 
-    $ day += 1
-    scene general_background
+    scene general_background with dissolve
     show tia_happy at Position(xpos = 0.456) with dissolve
 
     Tc "Well, hello!"
@@ -426,9 +437,10 @@ label TiaDeCascais_2_2:
     Tc "I need some sugar to get myself ready for today’s party!"
     Mc "As you wish."
 
-    call coffee_begin
+    call begin_minigame
     call compara_tia2
     scene general_background
+    play music "audio/lofi_diogo.mp3" loop fadein 2
 
     if completed == 1:
         $ tia_points += 1
@@ -454,6 +466,9 @@ label TiaDeCascais_2_2:
         Mc "Thank you, that means a lot."
         Tc "Business is hard. Keep your head up."
         Mc "Will do ma’am."
+
+        play sound "audio/coins.mp3" noloop
+
         Tc "Here’s the money."
         Mc "Thank you, let me just grab the change."
         Tc "No need darling."
@@ -487,6 +502,9 @@ label TiaDeCascais_2_2:
 
         Tc "Sorry if I’m being rude, but my palette is kind of sensitive."
         Mc "It’s fine, it’s my fault."
+
+        play sound "audio/coins.mp3" noloop
+
         Tc "Here’s your money."
         Mc "Thank you."
         Tc "See you tomorrow darling."
@@ -501,9 +519,8 @@ label TiaDeCascais_2_2:
 label TiaDeCascais_3_1:
     # points accepted: 2
 
-    $ day += 1
-    scene general_background
-    show tia_happy at Position(xpos=0.456)
+    scene general_background with dissolve
+    show tia_happy at Position(xpos=0.456) with dissolve
 
     Tc "Hello Darling. How are you today?"
     Mc "I’m fine, thanks. What about you?"
@@ -556,21 +573,23 @@ label TiaDeCascais_3_1:
     hide tia_happy
     show tia_pat at Position(xpos=0.66)
 
-    Ck "..."
+    Co "..."
     Tc "Ohh I know I know."
     Tc "Well, enough about parties."
     Tc "Today I want a good coffee with just a little bit of sugar."
 
     hide tia_pat
-    show tia_sasssy at Position(xpos=0.7)
+    show tia_sassy at Position(xpos=0.7)
 
     Tc "Something not absurdly sweet."
     Tc "And maybe I’ll try some milk."
+    Tc "And that spice on top, you know?"
     Mc "Sure. I’ll be right back."
 
-    call coffee_begin
+    call begin_minigame
     call compara_tia3
-    scene general_background
+    scene general_background with dissolve
+    play music "audio/lofi_diogo.mp3" loop fadein 2
 
     if completed == 1:
         $ tia_points += 1
@@ -612,14 +631,16 @@ label TiaDeCascais_3_1:
         Tc "Thank you for the explanation"
         Tc "I think I’ll have another walk in the park today."
         Tc "You aren’t tired, are you Little Cookie?"
-        Ck "..."
+        Co "..."
         Tc "Who’s adorable? Who’s adorable?"
         Tc "Yes, it’s you!"
 
         hide tia_happy
         show tia_pat at Position(xpos=0.66)
         Tc "..."
+        hide tia_pat
         show tia_happy at Position(xpos=0.456)
+        play sound "audio/coins.mp3" noloop
 
         Tc "Here’s the payment."
         Tc "And here’s a little tip."
@@ -665,6 +686,9 @@ label TiaDeCascais_3_1:
         Tc "Thank you for the explanation."
         Mc "You’re welcome."
         Tc "I think I’ll take another walk with Little cookie."
+
+        play sound "audio/coins.mp3" noloop
+
         Tc "Here’s your money."
         Mc "Thank you Mrs. Susan."
         Tc "I’ll see you tomorrow."
@@ -679,9 +703,8 @@ label TiaDeCascais_3_1:
 label TiaDeCascais_3_2:
     # points accepted: 0, 1
 
-    $ day += 1
-    scene general_background
-    show tia_happy at Position(xpos=0.456)
+    scene general_background with dissolve
+    show tia_happy at Position(xpos=0.456) with dissolve
 
     Tc "Hello Darling. How are you today?"
     Mc "I’m fine, thanks. What about you?"
@@ -729,20 +752,22 @@ label TiaDeCascais_3_2:
     show tia_pat at Position(xpos=0.66)
 
     Tc "Isn’t that right Little Cookie?"
-    Ck "..."
+    Co "..."
     Tc "Ohh I know I know."
     Tc "Well, enough about parties."
-    Tc "Today I’d like a good milky coffee with a good amount of sugar."
+    Tc "Today I’d like a good milky coffee with a bit of sugar."
 
     hide tia_pat
-    show tia_sasssy at Position(xpos=0.7)
+    show tia_sassy at Position(xpos=0.7)
 
     Tc "I don’t want it that sweet, but still decently sweet."
+    Tc "Also, I want that spice on top please."
     Mc "Sure. I’ll be right back."
 
-    call coffee_begin
+    call begin_minigame
     call compara_tia3
-    scene general_background
+    scene general_background with dissolve
+    play music "audio/lofi_diogo.mp3" loop fadein 2
 
     if completed == 1:
         $ tia_points += 1
@@ -784,7 +809,7 @@ label TiaDeCascais_3_2:
         Tc "Thank you for the explanation my darling."
         Tc "I think I’ll have another walk in the park today."
         Tc "You aren’t tired, are you Little Cookie?"
-        Ck "..."
+        Co "..."
         Tc "Who’s adorable? Who’s adorable?"
         Tc "Yes, it’s you!"
 
@@ -792,6 +817,7 @@ label TiaDeCascais_3_2:
         show tia_pat at Position(xpos=0.66)
         Tc "..."
         show tia_happy at Position(xpos=0.456)
+        play sound "audio/coins.mp3" noloop
 
         Tc "Here’s the payment."
         Mc "Thank you so much."
@@ -837,9 +863,12 @@ label TiaDeCascais_3_2:
         Tc "I think I’ll have another walk in the park today."
         Tc "Before it’s time to party again!"
         Tc "You aren’t tired, are you Little Cookie?"
-        Ck "..."
+        Co "..."
         Tc "Who’s adorable? Who’s adorable?"
         Tc "Yes, it’s you!"
+
+        play sound "audio/coins.mp3" noloop
+
         Tc "Here’s the payment."
         Mc "Thank you so much."
         Tc "See you tomorrow."
@@ -855,9 +884,8 @@ label TiaDeCascais_3_2:
 label TiaDeCascais_4_1:
     # points acepted: 2, 3
 
-    $ day += 1
-    scene general_background
-    show tia_happy at Position(xpos=0.456)
+    scene general_background with dissolve
+    show tia_happy at Position(xpos=0.456) with dissolve
 
     Tc "Hello! How are you today?"
     Tc "Is everything fine?"
@@ -870,7 +898,7 @@ label TiaDeCascais_4_1:
     Tc "The day has been amazing!"
     Tc "I’ve been walking Little Cookie around the park for a while."
     Tc "She’s been loving it!"
-    Ck "..."
+    Co "..."
     Mc "I’m very glad to hear that."
     Mc "So, how was the party yesterday?"
 
@@ -909,9 +937,10 @@ label TiaDeCascais_4_1:
     Mc "Even though there’s no right or wrong way to drink your coffee."
     Mc "Give me a second."
 
-    call coffee_begin
-    call comapra_tia4
-    scene general_background
+    call begin_minigame
+    call compara_tia4
+    scene general_background with dissolve
+    play music "audio/lofi_diogo.mp3" loop fadein 2
 
     if completed == 1:
         $ tia_points += 1
@@ -945,9 +974,10 @@ label TiaDeCascais_4_1:
 
         hide tia_sassy
         show tia_happy at Position(xpos=0.456)
+        play sound "audio/coins.mp3" noloop
 
         Tc "There you go."
-        Mc "now you can start making your own specialty coffee at home."
+        Mc "Now you can start making your own specialty coffee at home."
         Mc "But please, come visit the roulote once in a while ahaha."
         Tc "Ahaha, of course, don’t worry."
         Tc "Well, I think I should go."
@@ -981,7 +1011,7 @@ label TiaDeCascais_4_1:
 
         call coffee_begin
 
-        if coffee_right == 0:
+        if completed == 0:
             $ tia_points += 1
             hide tia_sassy
             show tia_drinking at Position(xpos=0.08)
@@ -1013,6 +1043,7 @@ label TiaDeCascais_4_1:
 
             hide tia_sassy
             show tia_happy at Position(xpos=0.456)
+            play sound "audio/coins.mp3" noloop
 
             Tc "There you go."
             Mc "now you can start making your own specialty coffee at home."
@@ -1030,7 +1061,7 @@ label TiaDeCascais_4_1:
             "{i}May these red and yellow days last until the season’s end"
             "{i}And the autumn leaves fall from the trees around the park."
 
-        elif coffee_right == 0:
+        elif completed == 0:
             show tia_drinking at Position(xpos=0.08)
 
             Tc "..."
@@ -1049,25 +1080,19 @@ label TiaDeCascais_4_1:
             "{i}God, how did I fail that coffee…"
             Tc "Tell me something, do you sell coffee beans here?"
             Mc "Yes, we do sell coffee beans from farmers all around the world."
-            Tc "Amazing. I’d like to buy one package."
-            Tc "What do you recommend?"
-            Mc "Hmm… I’d say this one from the Equator is always a safe pick."
-            Tc "I’ll trust your judgment."
-            Tc "How much is it?"
-            Mc "The coffee beans are 15$, plus the usual price of the coffee."
-            Tc "There you go."
-            Mc "now you can start making your own specialty coffee at home."
-            Mc "But please, come visit the roulote once in a while ahaha."
-            Tc "Ahaha, of course, don’t worry."
-            Tc "Well, I think I should go."
+            Tc "Amazing."
+
+            play sound "audio/coins.mp3" noloop
+
+            Tc "So, here's the money darling."
+            Tc "I think I should go."
             Mc "See you tomorrow Susan."
 
             hide tia_sassy with dissolve
 
-            "{i}I'm glad this lady found something comforting in this roulote."
-            "{i}The breeze from the afternoon hits like anything else around here."
-            "{i}May these red and yellow days last until the season’s end"
-            "{i}And the autumn leaves fall from the trees around the park."
+            "{i}This lady became a different person throughout these days."
+            "{i}I wonder if the falling leaves are the culprits."
+            "{i}Or maybe it's the coffee, who knows..."
 
             scene black with dissolve
 
@@ -1078,9 +1103,8 @@ label TiaDeCascais_4_1:
 label TiaDeCascais_4_2:
     # points accepted: 0, 1
 
-    $ day += 1
-    scene general_background
-    show tia_happy at Position(xpos=0.456)
+    scene general_background with dissolve
+    show tia_happy at Position(xpos=0.456) with dissolve
 
     Tc "Hello! How are you today?"
     Mc "I’m fine, thanks. What about you?"
@@ -1091,7 +1115,7 @@ label TiaDeCascais_4_2:
     Tc "Little Cookie has been such a good girl today."
     Tc "Who is the best girl?"
     Tc "It’s you!"
-    Ck "..."
+    Co "..."
     Mc "How did you feel about yesterday’s party?"
 
     hide tia_happy
@@ -1116,9 +1140,10 @@ label TiaDeCascais_4_2:
     Tc "Hmm, I want something a little bit sweet, just a little."
     Mc "Ok, a second."
 
-    call coffee_begin
+    call begin_minigame
     call compara_tia4
-    scene general_background
+    scene general_background with dissolve
+    play music "audio/lofi_diogo.mp3" loop fadein 2
 
     if completed == 1:
         $ tia_points += 1

@@ -17,7 +17,7 @@ label start:
     define Tc = Character("Susan", who_color="#cc9741")
     define Kid = Character("Kid", who_color="#cc9741")
     define John = Character("John", who_color="#cc9741")
-    define Phy = Character("Girl", who_color="#cc9741")
+    define Brit = Character("Girl", who_color="#cc9741")
     define Co = Character("Little Cookie", who_color="#cc9741")
 
 
@@ -41,26 +41,29 @@ label start:
     image kid_normal = "kid_normal.png"
     image kif_drinking = "kid_drinking.png"
 
-    image girl_happy = "girl_happy.png"
-    image girl_sad = "girl_sad.png"
-    image girl_traumatized = "girl_traumatized.png"
-    image girl_normal = "girl_normal-png"
-    image girl_drinking = "girl_drinking.png"
+    image girl_happy = im.FactorScale("girl_happy.png", 0.45)
+    image girl_sad = im.FactorScale("girl_sad.png", 0.45)
+    image girl_traumatized = im.FactorScale("girl_traumatized.png", 0.45)
+    image girl_normal = im.FactorScale("girl_normal.png", 0.45)
+    image girl_drinking = im.FactorScale("girl_drinking.png", 0.45)
     #----------------------------- DAY MANAGMENT -------------------------------
     # DAY 1
-    call TiaDeCascais from _call_TiaDeCascais
-    call kid
+    #call girl
+    call TiaDeCascais
+    #call kid
     $ day += 1
 
     # DAY 2
     call TiaDeCascais
-    call kid
+    #call kid
+    $ day += 1
+
     # DAY 3
     call TiaDeCascais
+    $ day += 1
 
     # DAY 4
     call TiaDeCascais
-
 
 
     return

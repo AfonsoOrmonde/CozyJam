@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Kid.rpy", line 109: choice menuitem expects a non-empty block.
-    "You're welcome.":
-                      ^
+File "game/Girl.rpy", line 25: end of line expected.
+    show girl_normal with dissolve at Position(xpos = 0.20)
+                                   ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Sep 22 01:07:54 2022
+Thu Sep 22 07:36:05 2022

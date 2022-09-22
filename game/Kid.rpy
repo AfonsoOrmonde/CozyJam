@@ -188,8 +188,8 @@ label kid_2_1:
     Kid"..."
     menu:
         "...":
-        Kid "Hehe, yep I'm really starting to get you."
-        "{i} I think I'm the one starting to get you."
+            Kid "Hehe, yep I'm really starting to get you."
+            "{i} I think I'm the one starting to get you."
 
         "Hello the-":
             hide kid_normal
@@ -315,8 +315,8 @@ label kid_2_2:
     Kid"..."
     menu:
         "...":
-        Kid "Hehe, yep I'm really starting to get you."
-        "{i} I think I'm the one starting to get you."
+            Kid "Hehe, yep I'm really starting to get you."
+            "{i} I think I'm the one starting to get you."
 
         "Hello the-":
             hide kid_normal

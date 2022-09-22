@@ -1,40 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 51, in script call
-    call kid
-  File "game/Kid.rpy", line 4, in script call
-    call kid_1
-  File "game/Kid.rpy", line 105, in script call
-    call compara_kid1
-  File "game/concoctioncafe.rpy", line 274, in script
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-  File "game/concoctioncafe.rpy", line 274, in <module>
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-NameError: name 'chantili' is not defined
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+ScriptError: could not find label 'comapra_tia4'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 51, in script call
-    call kid
-  File "game/Kid.rpy", line 4, in script call
-    call kid_1
-  File "game/Kid.rpy", line 105, in script call
-    call compara_kid1
-  File "game/concoctioncafe.rpy", line 274, in script
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\afons\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/concoctioncafe.rpy", line 274, in <module>
-    if coffee == 0 and milk == 1 and cinammon == 0 and marshmallow == 1 and sugar == 0 and chantili == 0 and cherry == 0 and chocolate == 1:
-NameError: name 'chantili' is not defined
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/script.rpy", line 66, in script call
+    call TiaDeCascais
+  File "game/TiaDeCascais.rpy", line 17, in script call
+    call TiaDeCascais_4_1 from _call_TiaDeCascais_4_1
+  File "game/TiaDeCascais.rpy", line 940, in script call
+    call begin_minigame
+  File "C:\Users\ASUS\Downloads\renpy-8.0.0-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'comapra_tia4'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 CozyJam 1.0
-Thu Sep 22 01:27:04 2022
+Thu Sep 22 09:54:52 2022
